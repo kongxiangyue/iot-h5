@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="js/websocket.js"></script>
+<script src="js/doos.js"></script>
+<title>智能家居</title>
+<style>
+html,body{
+	background:#666;
+	padding-top:0px;
+	padding:0px;
+	margin:0px;
+	}
+#box{
+	width: 1024px;
+	height: 650px;
+	margin: auto;
+	background: -webkit-linear-gradient( #280000, #AE0000, #3E0000); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient( #280000, #AE0000, #3E0000); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient( #280000, #AE0000, #3E0000); /* Firefox 3.6 - 15 */
+	background: linear-gradient( #280000, #AE0000, #3E0000);
+	color: #FFF;
+	}
+
+#pics{
+	width:424px;
+	height:535px;
+	margin:auto;
+	position:relative;
+	float:left;	
+}
+#pic{
+	margin-left:80px;
+	margin-top:20px;
+	}
+#left{width:600px;
+	height:600px;
+	float:left;
+	}
+.button_type1
+{ 
+  width:120px;
+  height:80px;
+  font-size:16px;
+  border:3px solid  #505050;
+  background: -webkit-linear-gradient( #3E0000, #FFD9D9, #3E0000); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient( #3E0000, #FFD9D9, #3E0000); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient( #3E0000, #FFD9D9, #3E0000); /* Firefox 3.6 - 15 */
+  background: linear-gradient( #3E0000, #FFD9D9, #3E0000);
+  font-size:35px;
+  font-weight:bold; 	
+}
+#tb1{
+	margin-top:40px;
+	}
+#PassWord{
+	width:355px;
+	height:50px;
+	border: 7px #666 solid;
+	}	
+</style>
+</head>
+<body onLoad="StartLoad()">
+<div id="box">
+  <div id="pics">
+    	<img src="img/door.png" id="pic">
+        </div> 
+        
+   <div id="left">
+   <table width="358px" border="0" align="left" cellspacing="15" id="tb1">
+  <tr>
+    <td height="50" colspan="4" style="color:#600; background:#FFF; font-size:32px" colspan="3" id="PassWord"></td> 
+    </tr>
+  <tr>
+    <td><input type="button" id="But1"  class="button_type1"  value="1"   onClick="Key1()"/> </td>
+    <td><input type="button" id="But2"  class="button_type1"  value="2"   onClick="Key2()"/> </td>
+    <td><input type="button" id="But3"  class="button_type1"  value="3"   onClick="Key3()"/> </td>
+    <td><input type="button" id="But4"  class="button_type1"  value="CLR" onClick="KeyCLR()"/> </td>
+  </tr>
+  <tr>
+    <td><input type="button" id="But4"  class="button_type1"  value="4"   onClick="Key4()"/> </td>
+    <td><input type="button" id="But5"  class="button_type1"  value="5"   onClick="Key5()"/> </td>
+    <td><input type="button" id="But6"  class="button_type1"  value="6"   onClick="Key6()"/> </td>
+    <td><input type="button" id="But12" class="button_type1"  value="OK"  onClick="KeyOK()"/>  </td>
+  </tr>
+  <tr>
+    <td><input type="button" id="But7"  class="button_type1"  value="7"   onClick="Key7()"/> </td>
+    <td><input type="button" id="But8"  class="button_type1"  value="8"   onClick="Key8()"/> </td>
+    <td><input type="button" id="But9"  class="button_type1"  value="9"   onClick="Key9()"/> </td>
+    <td><input type="button" id="ButF1" class="button_type1"  value="F1"  onClick="KeyF1()"/> </td>
+  </tr>
+  <tr>
+    <td><input type="button" id="But10" class="button_type1"  value="*"   onClick="Key10()"/> </td>
+    <td><input type="button" id="But0"  class="button_type1"  value="0"   onClick="Key0()"/> </td>
+    <td><input type="button" id="But11" class="button_type1"  value="#"   onClick="Key11()"/> </td>
+    <td><input type="button" id="ButF2" class="button_type1"  value="Return" onClick="Return()"/></td>  
+  </tr>  
+</table>
+   
+  </div>
+</div>
+</body>
+</html>

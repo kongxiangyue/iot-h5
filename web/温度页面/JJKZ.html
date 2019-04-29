@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, 
+		minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	
+<script src="JS/Control.js"></script>
+<script src="JS/websocket.js"></script>
+
+<style type="text/css">
+ @import url("CSS/Css1.css")screen and (min-width: 1280px);
+ @import url("CSS/Css2.css")screen and (max-width: 1279px);
+
+body{
+	margin:0 auto;
+}
+img{
+	width:100%;
+}
+a{
+  text-decoration: none;
+}
+	</style>
+
+	</head>
+	<body>
+		<div id="back"> 
+			<div id="Win">
+            
+			    <div id="BackGround">
+                <div id="Text_"><font>智能温度控制系统</font></div>
+                <div id="TimeText"><font>当前时间： 2017 年 12 月 12 日 周一 12:12:12</font></div>
+                </div>
+                
+                <div id="Line"></div>
+                
+                <div id="Temxianshi">
+                    <div id="Tem_"><strong><font id="Text_3">当前温度：</font></strong>
+                    	 <div id="Tem"><div  id="Tem_1">00</div></div>
+                    </div>
+                    
+                    <div id="Tem2"><strong><font id="tem-2">设置时间：</font></strong>
+                    	<input id="text1" type="text" name="firstname" disabled="disabled"> 
+                        <!-- disabled：文本框是否可被编辑  可以，=“ ”；不可以，=disable -->
+               			<div class="TemDW3"id="TemDW4"><font>S</font></div> 
+                    </div>
+                        <div class="TemDW"id="TemDW2"><font>℃</font></div> 
+                    
+                     <button id="But" onClick="GetTemp_Mode()">手动获取</button>
+                     <button id="But_1" onClick="Get_Set()">获取</button>
+                </div>
+            </div>      
+       </div>
+	</body>
+</html>

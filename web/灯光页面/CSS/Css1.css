@@ -1,0 +1,56 @@
+#fu
+{  
+	margin-left:auto;
+	margin-top:auto;
+	margin-right:auto;
+	width:1280px;
+	height:720px;  
+	position:relative;
+	background:#286	
+} 
+#key1
+{
+	width: 80px;
+	height: 60px;
+	left: 460px;
+	top: 460px;
+        font-size:30px;   /*字体大小*/
+        background-color: #FFAA00;   /*背景色*/
+        border-radius:10px;
+        cursor:pointer;/*设置鼠标在元素上方的光标外形，这里取pointer设置鼠标为手指样光标*/
+	position:absolute;
+}
+#key1:hover{/*该选择器实现鼠标移动到元素上方时的效果，大括号里编写需要更改的CSS属性以及更改的值，例如这里设置鼠标移动到元素上方时更改背景色*/
+	background-color:##FFAA00;
+}
+#key1:active{/*该选择器实现鼠标点击元素时的效果，大括号里编写需要更更改的CSS属性以及更改的值*/
+	top: 450px;
+	left: 450px;
+	background-color:#FFAA00;
+	box-shadow: 1px 1px 2px #000000;}
+#key2
+{
+	width: 80px;
+	height: 60px;
+	left: 750px;
+	top: 460px;
+        font-size:30px;   /*字体大小*/
+        background-color: #FFAA00;   /*背景色*/
+        border-radius:10px;
+        cursor:pointer;/*设置鼠标在元素上方的光标外形，这里取pointer设置鼠标为手指样光标*/
+	position:absolute;
+}
+#key2:hover{/*该选择器实现鼠标移动到元素上方时的效果，大括号里编写需要更改的CSS属性以及更改的值，例如这里设置鼠标移动到元素上方时更改背景色*/
+	background-color:##FFAA00;
+}
+#key2:active{/*该选择器实现鼠标点击元素时的效果，大括号里编写需要更更改的CSS属性以及更改的值*/
+	top: 450px;
+	left:740px;
+	background-color:#FFAA00;
+	box-shadow: 1px 1px 2px #000000;}
+#dgm{
+	top: 20px;
+        width: 200px;
+	margin:auto;
+	position:relative;
+}

@@ -1,0 +1,155 @@
+html{
+	font-family:"黑体";
+}
+#back{
+	margin-left:auto;
+	margin-top:auto;
+	margin-right:auto;
+	width:640px;
+	height:360px;
+	position:relative;
+}
+#Win{
+	margin-left:auto;
+	margin-top:auto;
+	margin-right:auto;
+	width:640px;
+	height:360px;
+	position:absolute;
+}
+#BackGround{
+	width:635px;
+	height:355px;
+	top:2.5px;
+	left:2.5px;
+	background:#00ffff;
+	border-radius:4px;
+	box-shadow:0px 2px 10px #000,
+	           -1px 1px 2px rgba(200,200,200,0.25) inset,
+	           -1px 1px 2px rgba(200,200,200,0.25) inset;
+	position:absolute;
+}
+
+#Text_{
+	width:635px;
+	top:27.5px;
+	text-align:center;
+	text-shadow:2px 2px 2px #fff;
+	color:#000;
+	font-size:2.25em;
+	position:absolute;
+}
+#Line{
+	width:535px;
+	height:2px;
+	top:72.5px;
+	left:50px;
+	background:#fff;
+	box-shadow: 1px 1px 1px #888,
+	            1px -1px 1px #888,
+	            -1px 1px 1px #888;
+	position:absolute;
+}
+#TimeText{ 
+	width:635px;
+	top:77.5px;
+	text-align:center;
+	text-shadow:2px 2px 2px #fff;
+	color:#000;
+	font-size:1.5em;
+	position:absolute;
+}
+#Text_3{
+	font-size:1em;
+}
+.TemDW{
+	font-size:1.5em;
+	position:absolute;
+}
+
+.TemDW3{
+	font-size:1.5em;
+	position:absolute;
+}
+
+#TemDW2{
+	top:8px;
+	right:4px;
+}
+
+#TemDW4{
+	top:0px;
+	right:-100px;
+}
+
+#Temxianshi{
+	width: 200px;
+	height: 90px;
+	top: 154px;
+	left: 220px;
+	;
+	border: 3px solid #fF0;
+	border-radius: 4px;
+	box-shadow: 1px 2px 2px #888,
+	            -1px 2px 2px #888;
+	position: absolute;
+}
+#Tem_{
+	left:10px;
+	top:10px;
+	position:absolute;
+}
+#Tem{
+	width:75px;
+	height:25px;
+	left:85px;
+	top:-2.5px;
+	background:#fff;
+	text-align:center;
+	border:1px solid #000;
+	font-size:1.5em;
+	position:absolute;
+}
+#Tem_1{
+	width:75px;
+	line-height:25px;
+	overflow:hidden; 
+	text-align:center;
+	position:absolute;
+}
+
+#Tem2{
+	left:10px;
+	top:50px;
+	position:absolute;
+}
+
+#Tem-2{
+	font-size:1em;
+}
+
+#text1
+{
+	width:75px;
+	height:25px;
+	top:0px;
+	left:85px;
+	position:absolute;
+}
+
+#But{
+	width:70px;
+	height:40px;
+	top:100px;
+	left:200px;
+	position:absolute;
+}
+
+#But_1
+{
+	width: 70px;
+	height: 40px;
+	top: 100px;
+	left: -70px;
+	position: absolute;
+}
