@@ -82,3 +82,4 @@ PROJECT_PROJ.XSD
 *.XML
 bash.exe.stackdump
 /main
+*.bak
