@@ -193,7 +193,7 @@ void switch_lock(void)
 						SendString(1,"in recovery\r\n");      //·µ»Ø»Ö¸´ÖÐ   
 						Boot_wait(5,3000);                
 						Boot_wait(2,400);
-						dat1[0]='1';dat1[1]='2';
+						dat1[0]='1';dat1[1]='2';               // Ä¬ÈÏÃÜÂë123456
 						dat1[2]='3';dat1[3]='4';
 						dat1[4]='5';dat1[5]='6';
 						ISP_IAP_sectorErase(0x0000);           //²Á³ý
