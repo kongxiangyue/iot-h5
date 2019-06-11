@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>温度</title>
+
+
+        <style>
+            #container {
+                background-color:#c0c0c0;
+                width: 640px;
+                margin: 20px auto;
+                text-align: center;
+            }
+         
+            #pannel {
+                margin: auto;
+            }
+
+
+        </style>
+
+        <script type="text/javascript" src="JS/websocket.js"></script>
+        <script>
+        var timer;
+
+        
+
+        function sendAsk() {
+            Send_Data_Str("Temp=?");
+        }
+
+        // 联网后被自动调用
+        function Connect() {
+            if (websocket_Connected != 1) {
+                alert("联网不成功");
+            } else {
+               timer = setInterval(sendAsk, 5);
+            }
+        }
+
+        function Server_Receive(str){
+            document.getElementById("tempDisp")
+            .setAttribute("value", str.substr(5, 4));
+        }
+        
+        </script>
+    </head>
+    <body >
+        <div id="container">
+            <div id="display">
+                
+                <span>当前温度</span><input id="tempDisp" type="text"></input>
+                <br>
+                <span>时间间隔</span><input id="modeDisp" disabled="disabled" type="text"></input>
+            </div>
+
+            <div >
+                <button id="getBtn" disabled="disabled">获取</button>
+                <button id="modeBtn">切换</button>
+                <br>
+                <span id="currentMode">当前模式:自动获取</span>
+            </div>
+        </div>
+       
+
+    </body>
+</html>
