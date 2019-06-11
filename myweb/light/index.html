@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>灯光</title>
+
+
+        <style>
+            #container {
+                background-color:#c0c0c0;
+                width: 640px;
+                margin: 20px auto;
+                text-align: center;
+            }
+         
+            #pannel {
+                margin: auto;
+            }
+
+
+        </style>
+
+        <script type="text/javascript" src="JS/websocket.js"></script>
+        <script>
+
+            function turnOn() {
+                document.getElementById("light")
+                   .setAttribute("src", "ing/timg2.png");
+            }
+
+            function turnOff() {
+                document.getElementById("light")
+                    .setAttribute("src", "ing/timg.png");
+            }
+        
+        // 联网后被自动调用
+        function Connect() {
+            if (websocket_Connected != 1) {
+                alert("联网不成功");
+            } else {
+                Send_Data_Str("Light=?");
+            }
+        }
+
+        function Send (Server_Data)   //数据发送
+        {
+            Send_Data_Str(Server_Data);
+        }
+        
+        function onTurnOn() {
+            Send("Light=0");
+        }
+
+        function onTurnOff() {
+            Send("Light=1");
+        }
+
+        function onReceiveStr(str){
+            if (str == "Light=0") {
+                turnOn();
+            } else if (str == "Light=1") {
+                turnOff();
+            }
+        }
+        
+        </script>
+    </head>
+    <body onload="init();">
+        <div id="container">
+            <img id="light" src="ing/timg.png">
+            <div id="pannel">
+                <button id="turn-on-btn" onclick="onTurnOn">开</button>
+                <button id="turn-off-btn" onclick="onTurnOff">关</button>
+            </div>
+        </div>
+
+    </body>
+</html>
