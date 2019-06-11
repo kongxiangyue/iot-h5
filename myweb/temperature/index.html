@@ -27,7 +27,7 @@
         
 
         function sendAsk() {
-            Send_Data_Str("Temp=?");
+            Send_Data_Str("TEMP=?");
         }
 
         // 联网后被自动调用
@@ -35,7 +35,7 @@
             if (websocket_Connected != 1) {
                 alert("联网不成功");
             } else {
-               timer = setInterval(sendAsk, 5);
+               timer = setInterval(sendAsk, 8000);
             }
         }
 
