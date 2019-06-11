@@ -55,22 +55,23 @@
             Send("Light=1");
         }
 
-        function onReceiveStr(str){
-            if (str == "Light=0") {
+        function Server_Receive(str){
+            alert(str);
+            if (str == "Light=0\r\n") {
                 turnOn();
-            } else if (str == "Light=1") {
+            } else if (str == "Light=1\r\n") {
                 turnOff();
             }
         }
         
         </script>
     </head>
-    <body onload="init();">
+    <body ">
         <div id="container">
             <img id="light" src="ing/timg.png">
             <div id="pannel">
-                <button id="turn-on-btn" onclick="onTurnOn">开</button>
-                <button id="turn-off-btn" onclick="onTurnOff">关</button>
+                <button id="turn-on-btn" onclick="onTurnOn();">开</button>
+                <button id="turn-off-btn" onclick="onTurnOff();">关</button>
             </div>
         </div>
 
