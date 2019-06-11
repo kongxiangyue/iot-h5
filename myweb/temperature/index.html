@@ -23,10 +23,14 @@
         <script type="text/javascript" src="JS/websocket.js"></script>
         <script>
         var timer;
+        var autoMode   = "当前模式:自动获取";
+        var manualMode = "当前模式:手动获取";
+        var interval = 8000;//ms
 
         
 
         function sendAsk() {
+            //console.log("TEMP=?");
             Send_Data_Str("TEMP=?");
         }
 
@@ -35,13 +39,32 @@
             if (websocket_Connected != 1) {
                 alert("联网不成功");
             } else {
-               timer = setInterval(sendAsk, 8000);
+               interval = 1000*document.getElementById("interDisp").getAttribute("value");
+            timer = setInterval(sendAsk, interval);
             }
         }
 
         function Server_Receive(str){
             document.getElementById("tempDisp")
             .setAttribute("value", str.substr(5, 4));
+        }
+
+        function onCurrentMode() {
+            var currentModeStr = document.getElementById("currentMode").innerHTML;
+            if (currentModeStr == autoMode) {
+                document.getElementById("currentMode").innerHTML = manualMode;
+                clearInterval(timer);
+                document.getElementById("getBtn").removeAttribute("disabled");
+            } else if (currentModeStr == manualMode) {
+                document.getElementById("currentMode").innerHTML = autoMode;
+                document.getElementById("getBtn").setAttribute("disabled", "disabled");
+                Connect();// 自动
+            }
+
+        }
+
+        function onGetBtn() {
+            sendAsk();
         }
         
         </script>
@@ -52,12 +75,12 @@
                 
                 <span>当前温度</span><input id="tempDisp" type="text"></input>
                 <br>
-                <span>时间间隔</span><input id="modeDisp" disabled="disabled" type="text"></input>
+                <span>时间间隔</span><input id="interDisp" type="text" value="8"></input>秒
             </div>
 
             <div >
-                <button id="getBtn" disabled="disabled">获取</button>
-                <button id="modeBtn">切换</button>
+                <button id="getBtn" onclick="onGetBtn();" disabled="disabled">获取</button>
+                <button id="modeBtn" onclick="onCurrentMode();">切换</button>
                 <br>
                 <span id="currentMode">当前模式:自动获取</span>
             </div>
