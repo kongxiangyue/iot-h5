@@ -70,8 +70,8 @@ void ScanA()  //串口数据处理函数
 
 void main()
 {                           
-	AUXR = AUXR|0x40|0x14|0x80; 
-	TMOD = 0x20|0x01;                 
+	AUXR = AUXR|0x40|0x14|0x80; // 1101 0100  // 不分频
+	TMOD = 0x20|0x01;       // 0010 0001          
 	InitUART1();	                    //串口1初始化函数
 	InitUART2(115200);	              //串口2初始化函数
 	PCA_isr_init();                   //PCA初始化               
