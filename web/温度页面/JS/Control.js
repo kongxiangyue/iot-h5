@@ -116,6 +116,7 @@ function GetTemp_Mode()//获取温度的模式
 	}
 	else if(change==1) //按键被按下,change=0,显示"手动获取",计时
 	{
+		//当显示"手动获取"时,上位机处于"自动获取"状态
 		document.getElementById("But").innerHTML="手动获取";
 		document.getElementById("But_1").innerHTML="获取";
 		document.getElementById("text1").disabled="disabled";

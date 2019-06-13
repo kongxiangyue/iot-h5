@@ -39,6 +39,8 @@ function Button_Off()  //点击界面的"关",触发button_off()
 	Send("Light=1");	
 }
 
+// 这个函数名已经在websocket.js里写死了
+// 换句话来说,Server_Receive是作为固定的接收数据的函数
 function Server_Receive(str)  //数据接收处理
 {
 	var R_data=str;
